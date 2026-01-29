@@ -14,18 +14,18 @@ The neural network has a simple **two-layer structure**:
 
 ### Forward Propagation
 
-\[
+$$
 \begin{align*}
 Z^{[1]} &= W^{[1]} X + b^{[1]} \\
 A^{[1]} &= \text{ReLU}(Z^{[1]}) \\
 Z^{[2]} &= W^{[2]} A^{[1]} + b^{[2]} \\
 A^{[2]} &= \text{softmax}(Z^{[2]})
 \end{align*}
-\]
+$$
 
 ### Backward Propagation
 
-\[
+$$
 \begin{align*}
 dZ^{[2]} &= A^{[2]} - Y \\
 dW^{[2]} &= \frac{1}{m} dZ^{[2]} (A^{[1]})^T \\
@@ -34,18 +34,18 @@ dZ^{[1]} &= (W^{[2]})^T dZ^{[2]} \odot \text{ReLU}'(Z^{[1]}) \\
 dW^{[1]} &= \frac{1}{m} dZ^{[1]} X^T \\
 db^{[1]} &= \frac{1}{m} \sum dZ^{[1]}
 \end{align*}
-\]
+$$
 
 ### Parameter Update
 
-\[
+$$
 \begin{align*}
 W^{[1]} &:= W^{[1]} - \alpha dW^{[1]} \\
 b^{[1]} &:= b^{[1]} - \alpha db^{[1]} \\
 W^{[2]} &:= W^{[2]} - \alpha dW^{[2]} \\
 b^{[2]} &:= b^{[2]} - \alpha db^{[2]}
 \end{align*}
-\]
+$$
 
 ---
 
