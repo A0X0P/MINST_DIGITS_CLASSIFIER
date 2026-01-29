@@ -8,9 +8,9 @@ This project implements a **two-layer neural network** using **NumPy** to classi
 
 The neural network has a simple **two-layer structure**:
 
-- **Input layer \(A^{[0]}\)**: 784 units corresponding to the 28x28 pixel images.
-- **Hidden layer \(A^{[1]}\)**: 10 units with **ReLU** activation.
-- **Output layer \(A^{[2]}\)**: 10 units corresponding to the 10 digit classes with **softmax** activation.
+- **Input layer $A^{[0]}$**: 784 units corresponding to the 28x28 pixel images.
+- **Hidden layer $A^{[1]}$**: 10 units with **ReLU** activation.
+- **Output layer $A^{[2]}$**: 10 units corresponding to the 10 digit classes with **softmax** activation.
 
 ### Forward Propagation
 
@@ -51,15 +51,16 @@ $$
 
 ## Layer Shapes
 
-| Layer | Shape       | Activation |
-|-------|------------|------------|
-| Input \(A^{[0]}\) | 784 × m    | -          |
-| Hidden \(A^{[1]}\) | 10 × m     | ReLU       |
-| Output \(A^{[2]}\) | 10 × m     | Softmax    |
-| W1    | 10 × 784   | -          |
-| b1    | 10 × 1     | -          |
-| W2    | 10 × 10    | -          |
-| b2    | 10 × 1     | -          |
+| Layer            | Shape    | Activation |
+|------------------|----------|------------|
+| Input ($A^{[0]}$)  | 784 × m  | –          |
+| Hidden ($A^{[1]}$) | 10 × m   | ReLU       |
+| Output ($A^{[2]}$) | 10 × m   | Softmax    |
+| W1               | 10 × 784 | –          |
+| b1               | 10 × 1   | –          |
+| W2               | 10 × 10  | –          |
+| b2               | 10 × 1   | –          |
+
 
 *m = number of examples*
 
